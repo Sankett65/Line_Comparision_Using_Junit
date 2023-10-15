@@ -24,6 +24,8 @@ public class LineComparision {
         LineComparision obj =new LineComparision(5,8,2,6);
         LineComparision obj1 =new LineComparision(5,8,2,6);
 
+       boolean a= obj.equality(obj,obj1);
+        System.out.println(a);
 
     }
 
@@ -38,5 +40,11 @@ public class LineComparision {
         return finalAns;
     }
 
+    public  boolean equality(LineComparision lineComparision1,LineComparision lineComparision2){
+        Double length= lineComparision1.calculateLength(lineComparision1);
+        Double length1= lineComparision2.calculateLength(lineComparision2);
+
+       return length.equals(length1);
+    }
 
 }

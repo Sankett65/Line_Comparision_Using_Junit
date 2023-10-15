@@ -22,5 +22,10 @@ public class LineComparisionTesting {
         Assertions.assertEquals(3.61,obj.calculateLength(obj));
     }
 
-
+    @Test
+    public void  toCheckEqulityOfTwoLineBasedOnEndPoint(){
+         obj = new LineComparision(5,8,2,6);
+         obj1=new LineComparision(5,8,2,6);
+         Assertions.assertTrue( obj.equality(obj,obj1));
+    }
 }
