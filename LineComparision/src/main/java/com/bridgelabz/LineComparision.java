@@ -27,6 +27,8 @@ public class LineComparision {
        boolean a= obj.equality(obj,obj1);
         System.out.println(a);
 
+        int b = obj.compareLength(obj1,obj);
+        System.out.println(b);
     }
 
     public double calculateLength(LineComparision lineComparision) {
@@ -45,6 +47,12 @@ public class LineComparision {
         Double length1= lineComparision2.calculateLength(lineComparision2);
 
        return length.equals(length1);
+    }
+
+    public int compareLength(LineComparision lineComparision1,LineComparision lineComparision2){
+        Double length1= lineComparision1.calculateLength(lineComparision1);
+        Double length2= lineComparision2.calculateLength(lineComparision2);
+        return length1.compareTo(length2);
     }
 
 }
